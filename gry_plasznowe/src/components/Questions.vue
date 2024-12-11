@@ -34,13 +34,14 @@ defineProps({
   opis3:{
     type: String,
     default: 'essegesgdsef',
-  }
+  },
+  
 });
 </script>
 
 <template>
   <section class="py-4">
-    <div class="container-m lg:container m-auto">
+    <div class="container-xl lg:container m-auto">
       <h1 class="text-2xl font-bold py-2 mt-2 mb-4 text-center">{{ pytanie }}</h1>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 rounded-lg">
         <Card class="max-w-sm p-4">
@@ -48,39 +49,35 @@ defineProps({
           <p class="mt-2 mb-4">
             {{opis1}}
           </p>
-          <RouterLink
-            to="/jobs"
-            class="inline-block bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-700"
+          <button
+            
+            class="inline-block bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-gray-700"
             @click="handleSelection(0)"
           >
             Wybierz
-          </RouterLink>
+          </button>
         </Card>
         <Card class="max-w-sm p-4">
           <h2 class="text-2xl font-bold">{{nazwa2}}</h2>
           <p class="mt-2 mb-4">
             {{ opis2 }}
           </p>
-          <RouterLink
-            to="/jobs/add"
+          <button
+            
             class="inline-block bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-600"
             @click="handleSelection(1)"
           >
             Wybierz
-          </RouterLink>
+        </button>
         </Card>
         <Card class="max-w-sm p-4">
           <h2 class="text-2xl font-bold">{{ nazwa3 }}</h2>
           <p class="mt-2 mb-4">
             {{opis3}}
           </p>
-          <RouterLink
-            to="/jobs/add"
-            class="inline-block bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-600"
-            @click="handleSelection(2)"
-          >
+          <button class="inline-block bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-600" @click="handleSelection(2)">
             Wybierz
-          </RouterLink>
+          </button>
         </Card>
       </div>
     </div>

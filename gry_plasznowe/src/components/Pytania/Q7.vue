@@ -1,5 +1,5 @@
 <script setup>
-import Questions from './Questions.vue';
+import Questions from '@/components/Questions.vue';
 </script>
 
 <template>

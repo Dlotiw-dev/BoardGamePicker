@@ -17,31 +17,31 @@ d = {'1': 0, '2': 1, '3+': 2}
 df['Liczba_graczy'] = df['Liczba_graczy'].map(d)
 
 
-d = {'darmowe': 0, '<500': 1, 'premium': 2, "?": 3}
+d = {'darmowe': 0, '<500': 1, 'premium': 2, "?": -1}
 df['koszt1'] = df['koszt1'].map(d)
 
-d = {'<500': 0, 'premium': 1, "?": 2}
+d = {'<500': 0, 'premium': 1, "?": -1}
 df['koszt2'] = df['koszt2'].map(d)
 
-d = {'nie': 0, 'tak': 1, '?': 2}
+d = {'nie': 0, 'tak': 1, '?': -1}
 df['Przesten'] = df['Przesten'].map(d)
 
-d = {'tak': 0, 'nie': 1, '?': 2}
+d = {'tak': 0, 'nie': 1, '?': -1}
 df['Samodzielny_druk'] = df['Samodzielny_druk'].map(d)
 
-d = {'tak': 0, 'nie': 1, '?': 2}
+d = {'tak': 0, 'nie': 1, '?': -1}
 df['Duzy_stol'] = df['Duzy_stol'].map(d)
 
 d = {'strategia': 0, 'logiczna': 1, 'przygodowa': 2}
 df['typ_gry'] = df['typ_gry'].map(d)
 
-d = {'deck building': 0, 'euro': 1, '"': 2}
+d = {'deck building': 0, 'euro': 1, '?': -1}
 df['mechanika_gry_s'] = df['mechanika_gry_s'].map(d)
 
-d = {'pattern matching': 0, 'roll&write': 1, '?': 2}
+d = {'pattern matching': 0, 'roll&write': 1, '?': -1}
 df['mechanika_gry_l'] = df['mechanika_gry_l'].map(d)
 
-d = {'dungeon crawl': 0, 'boss battler': 1, '?': 2}
+d = {'dungeon crawl': 0, 'boss battler': 1, '?': -1}
 df['mechanika_gry_p'] = df['mechanika_gry_p'].map(d)
 
 features = ['Liczba_graczy', 'koszt1', 'koszt2', 'Przesten', 'Samodzielny_druk', 'Duzy_stol', 'typ_gry', 'mechanika_gry_l', 'mechanika_gry_s','mechanika_gry_p']

@@ -1,7 +1,7 @@
 <script setup>
-import Questions from './Questions.vue';
+import Questions2 from '@/components/Questions2.vue';
 </script>
 
 <template>
-  <Questions pytanie="Koszt gry?" nazwa1="darmowe" nazwa2="<500"/>
+  <Questions2 pytanie="Koszt gry?" nazwa1="<500>" nazwa2="premium"/>
 </template>
