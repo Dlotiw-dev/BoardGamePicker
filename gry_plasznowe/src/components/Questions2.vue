@@ -3,8 +3,7 @@ import { RouterLink } from 'vue-router';
 import Card from '@/components/Card.vue';
 import router from '@/router';
 const emit = defineEmits(['pickedAnswer'])
-function handleSelection(option, event, link) {
-  // Emit the selected option back to the parent (Home.vue)
+function handleSelection(option) {
   emit('pickedAnswer', option);
   
 }
@@ -28,14 +27,6 @@ defineProps({
   opis2:{
     type: String,
     default: 'essegesgdsef',
-  },
-  link1:{
-    type: String,
-    default: '/',
-  },
-  link2:{
-    type: String,
-    default: '/',
   },
 });
 </script>

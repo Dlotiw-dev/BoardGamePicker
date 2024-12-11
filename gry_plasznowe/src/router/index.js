@@ -22,56 +22,6 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/q1',
-      name: 'question1',
-      component: Q1,
-    },
-    {
-      path: '/q2',
-      name: 'question2',
-      component: Q2,
-    },
-    {
-      path: '/q3',
-      name: 'question3',
-      component: Q3,
-    },
-    {
-      path: '/q4',
-      name: 'question4',
-      component: Q4,
-    },
-    {
-      path: '/q5',
-      name: 'question5',
-      component: Q5,
-    },
-    {
-      path: '/q6',
-      name: 'question6',
-      component: Q6,
-    },
-    {
-      path: '/q7',
-      name: 'question7',
-      component: Q7,
-    },
-    {
-      path: '/q8',
-      name: 'question8',
-      component: Q8,
-    },
-    {
-      path: '/q9',
-      name: 'question9',
-      component: Q9,
-    },
-    {
-      path: '/q10',
-      name: 'question10',
-      component: Q10,
-    },
-    {
       path: '/answer',
       name: 'answer',
       component: Answer,

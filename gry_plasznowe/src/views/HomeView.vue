@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import axios from "axios";
-import { RouterLink, useRoute } from 'vue-router';
+import { RouterLink, useRouter } from 'vue-router';
 import Q1Cards from '@/components/Pytania/Q1.vue';
 import Q2Cards from '@/components/Pytania/Q2.vue';
 import Q3Cards from '@/components/Pytania/Q3.vue';
@@ -12,10 +12,10 @@ import Q7Cards from '@/components/Pytania/Q7.vue';
 import Q8Cards from '@/components/Pytania/Q8.vue';
 import Q9Cards from '@/components/Pytania/Q9.vue';
 import Q10Cards from '@/components/Pytania/Q10.vue';
-
-const go = (routePath) => {
-  const router = useRoute()
-  router.push('/answer')
+const router = useRouter()
+async function go (){
+  
+  await router.push({name: 'answer'})
 };
 const questions = ref({
   q1: 1,
@@ -29,18 +29,8 @@ const questions = ref({
   q9: 0,
   q10: 0,
 });
-const inputData = ref({
-        Liczba_graczy: '-1',
-        koszt1: '-1',
-        koszt2: '-1',
-        Przesten: '-1',
-        Samodzielny_druk: '-1',
-        Duzy_stol: '-1',
-        typ_gry: '-1',
-        mechanika_gry_l: '-1',
-        mechanika_gry_s: '-1',
-        mechanika_gry_p: '-1'
-      });
+
+import { inputData } from '@/store.js'
 let prediction = ref('brak');
 
 async function addPrediction() {
@@ -70,7 +60,7 @@ async function getPrediction() {
     }
   }
 function getAnswer1(option){
-  inputData.value.Liczba_graczy = option
+  inputData.Liczba_graczy = option
   questions.value.q1 = 0
   if (option === 0){
     questions.value.q2 = 1
@@ -78,10 +68,10 @@ function getAnswer1(option){
   else{
     questions.value.q3 = 1
   }
-  console.log(inputData.value)
+  console.log(inputData)
 }
 function getAnswer2(option){
-  inputData.value.koszt1 = option
+  inputData.koszt1 = option
   questions.value.q2 = 0
   if (option === 0){
     questions.value.q4 = 1
@@ -92,39 +82,39 @@ function getAnswer2(option){
   else if (option === 2){
     questions.value.q6 = 1
   }
-  console.log(inputData.value)
+  console.log(inputData)
 }
 function getAnswer3(option){
-  inputData.value.koszt2 = option
+  inputData.koszt2 = option
   questions.value.q3 = 0
-  if (inputData.value.Liczba_graczy === 2 && option === 1){
+  if (inputData.Liczba_graczy === 2 && option === 1){
     questions.value.q6 = 1
   }
   else{
     questions.value.q7 = 1
   }
-  console.log(inputData.value)
+  console.log(inputData)
 }
 function getAnswer4(option){
-  inputData.value.Przesten = option
+  inputData.Przesten = option
   questions.value.q4 = 0
   questions.value.q7= 1
-  console.log(inputData.value)
+  console.log(inputData)
 }
 function getAnswer5(option){
-  inputData.value.Samodzielny_druk = option
+  inputData.Samodzielny_druk = option
   questions.value.q5 = 0
   questions.value.q7 = 1
-  console.log(inputData.value)
+  console.log(inputData)
 }
 function getAnswer6(option){
-  inputData.value.Duzy_stol = option
+  inputData.Duzy_stol = option
   questions.value.q6 = 0
   questions.value.q7 = 1
   console.log(inputData.value)
 }
 function getAnswer7(option){
-  inputData.value.typ_gry = option
+  inputData.typ_gry = option
   questions.value.q7 = 0
   if (option  === 0){
     questions.value.q8 = 1
@@ -135,25 +125,25 @@ function getAnswer7(option){
   else if (option === 2){
     questions.value.q10 = 1
   }
-  console.log(inputData.value)
+  console.log(inputData)
 }
 function getAnswer8(option){
-  inputData.value.mechanika_gry_s = option
+  inputData.mechanika_gry_s = option
   questions.value.q8 = 0
   go('/answer')
-  console.log(inputData.value)
+  console.log(inputData)
 }
 function getAnswer9(option){
-  inputData.value.mechanika_gry_l = option
+  inputData.mechanika_gry_l = option
   questions.value.q9 = 0
   go('/answer')
-  console.log(inputData.value)
+  console.log(inputData)
 }
 function getAnswer10(option){
-  inputData.value.mechanika_gry_p = option
+  inputData.mechanika_gry_p = option
   questions.value.q10 = 0
   go('/answer')
-  console.log(inputData.value)
+  console.log(inputData)
 }
 </script>
 
@@ -165,7 +155,7 @@ function getAnswer10(option){
   <Q5Cards v-if="questions.q5" @pickedAnswer="getAnswer5"/>
   <Q6Cards v-if="questions.q6" @pickedAnswer="getAnswer6"/>
   <Q7Cards v-if="questions.q7" @pickedAnswer="getAnswer7"/>
-  <Q8Cards v-if="questions.q8" @pickedAnswer="getAnswer8">
+  <Q8Cards v-if="questions.q8" @pickedAnswer="getAnswer8"/>
   <Q9Cards v-if="questions.q9" @pickedAnswer="getAnswer9"/>
   <Q10Cards v-if="questions.q10" @pickedAnswer="getAnswer10"/>
 
