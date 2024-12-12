@@ -57,7 +57,7 @@ defineProps({
             Wybierz
           </button>
         </Card>
-        <Card class="max-w-sm p-4">
+        <Card class="p-4">
           <h2 class="text-2xl font-bold">{{nazwa2}}</h2>
           <p class="mt-2 mb-4">
             {{ opis2 }}
@@ -70,7 +70,7 @@ defineProps({
             Wybierz
         </button>
         </Card>
-        <Card class="max-w-sm p-4">
+        <Card class="p-4">
           <h2 class="text-2xl font-bold">{{ nazwa3 }}</h2>
           <p class="mt-2 mb-4">
             {{opis3}}

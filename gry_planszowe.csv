@@ -28,7 +28,7 @@ Liczba_graczy,koszt1,koszt2,Przesten,Samodzielny_druk,Duzy_stol,typ_gry,mechanik
 1,premium,?,?,?,tak,logiczna,?,pattern matching,?,Project L
 1,premium,?,?,?,tak,logiczna,?,roll&write,?,Twilight Inscription
 1,premium,?,?,?,tak,przygodowa,?,?,dungeon crawl,League of Dungeoneers
-1,premium,?,?,?,tak,przygodowa,?,?,boss battler,Aeon Tresspass Odyssey
+1,premium,?,?,?,tak,przygodowa,?,?,boss battler,Aeon Trespass Odyssey
 1,premium,?,?,?,nie,strategia,deck building,?,?,Legendary Marvel
 1,premium,?,?,?,nie,strategia,euro,?,?,Ankh
 1,premium,?,?,?,nie,logiczna,?,pattern matching,?,Bullet Star
@@ -41,7 +41,7 @@ Liczba_graczy,koszt1,koszt2,Przesten,Samodzielny_druk,Duzy_stol,typ_gry,mechanik
 2,?,<500,?,?,?,logiczna,?,roll&write,?,Legend of Hexdom
 2,?,<500,?,?,?,przygodowa,?,?,dungeon crawl,Roque Dungeon
 2,?,<500,?,?,?,przygodowa,?,?,boss battler,Dungeon of Doria
-2,?,premium,?,?,?,strategia,deck building,?,?,Arkham Horror The Card Game
+2,?,premium,?,?,?,strategia,deck building,?,?,Arkham Horror: The Card Game
 2,?,premium,?,?,?,strategia,euro,?,?,Castles of Burgundy
 2,?,premium,?,?,?,logiczna,?,pattern matching,?,Puzzle Dungeon
 2,?,premium,?,?,?,logiczna,?,roll&write,?,2d6 Dungeon
@@ -53,7 +53,7 @@ Liczba_graczy,koszt1,koszt2,Przesten,Samodzielny_druk,Duzy_stol,typ_gry,mechanik
 3+,?,<500,?,?,?,logiczna,?,roll&write,?,Dungeon and Dragons
 3+,?,<500,?,?,?,przygodowa,?,?,dungeon crawl,Clank Catacombs
 3+,?,<500,?,?,?,przygodowa,?,?,boss battler,Vagrantsong
-3+,?,premium,?,?,tak,strategia,deck building,?,?,DC deck building game
+3+,?,premium,?,?,tak,strategia,deck building,?,?,DC-Deck Building Game
 3+,?,premium,?,?,tak,strategia,euro,?,?,On Mars
 3+,?,premium,?,?,tak,logiczna,?,pattern matching,?,Brass Birmingham
 3+,?,premium,?,?,tak,logiczna,?,roll&write,?,Call of Cthulhu

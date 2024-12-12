@@ -38,6 +38,12 @@ async function addPrediction() {
       else if (games.value[0] == '143740'){
           primaryGame.value = games.value[7]
       }
+      else if (games.value[0] == '373169'){
+        primaryGame.value = games.value[1]
+      }
+      else if (games.value[0] == '362884'){
+        primaryGame.value = games.value[1]
+      }
       else{
         primaryGame.value = games.value[0]
       }
@@ -99,7 +105,8 @@ onMounted (async () => {
 </script>
 
 <template>
-  <div v-if="!state.isLoading" class="container mx-auto p-4">
+  <section v-if="!state.isloading" class="bg-slate-300">
+  <div class="container mx-auto p-4">
     <!-- Header -->
     <h3 class="text-xl font-semibold mb-4 text-center">{{ title }}</h3>
     <h1 class="text-4xl font-bold mb-2 text-center p-4">{{ prediction }}</h1>
@@ -109,7 +116,7 @@ onMounted (async () => {
       
       <!-- Left: Image -->
       <div class="justify-center p-4 m-2">
-        <img :src="state.details.image" alt="Image description" class="w-full lg:max-w-lg md:max-w-md xs:max-w-xs rounded-lg shadow-md" />
+        <img v-if="!state.isLoading" :src="state.details.image" alt="Image description" class="w-full lg:max-w-lg md:max-w-md xs:max-w-xs rounded-lg shadow-md" />
       </div>
 
       <!-- Right: Text -->
@@ -119,20 +126,15 @@ onMounted (async () => {
     </div>
 
     <!-- Bottom Section -->
-    <h3 class="text-xl font-semibold text-center mt-6">Conclusion or Final Thought</h3>
+    <h3 v-if="!state.isLoading" class="text-xl font-semibold text-center mt-6">Podsumowanie wyborów:</h3>
   </div>
+  
+  </section>
   <div v-else class="text-center text-gray-500 py-6">
-    <PulseLoader />
+      <PulseLoader />
   </div>
-  <div v-else class="container mx-auto p-4">
-    <h3 class="text-xl font-semibold mb-4 text-center">{{ title }}</h3>
-    <h1 class="text-4xl font-bold mb-2 text-center p-4">{{ prediction }}</h1>
-  </div>
-</template>
-  
-
-  
- <style scoped>
-  /* You can add styling here */
- </style>
-  
+    <!-- <div class="container mx-auto p-4">
+      <h3 class="text-xl font-semibold mb-4 text-center">{{ title }}</h3>
+      <h1 class="text-4xl font-bold mb-2 text-center p-4">{{ prediction }}</h1>
+    </div> -->
+  </template>
