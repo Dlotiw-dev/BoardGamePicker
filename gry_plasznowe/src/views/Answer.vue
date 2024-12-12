@@ -1,27 +1,67 @@
 <script setup>
 import axios from "axios";
-import { onMounted, ref } from 'vue';
+//import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
+import { onMounted, ref, reactive } from 'vue';
 import { inputData } from '@/store.js'
 let prediction = ref('brak');
 let title = ref('Twoja gra planszowa to:')
 let czekaj = ref(false)
+let primaryGame = ref('')
+const state = reactive({
+  isLoading: true,
+  details: {}
+});
+
+let games = ref('')
 async function addPrediction() {
-    const path = 'http://localhost:5000/predict';
-    try {
+  const path = 'http://localhost:5000/predict';
+  try {
       // Send POST request with the proper data
       const response = await axios.post(path,inputData, {headers: {
           'Content-Type': 'application/json'  // Ensure content type is JSON
         }
       
       });
-      prediction = response.data.message
+      //Tytuł gry
+      prediction.value = response.data.message
+      
       console.log('Prediction added successfully');
-      console.log(prediction)
-      czekaj.value = true
+      console.log(prediction.value)
+      //Id Gry
+      games.value = await searchBgg(prediction.value)
+      primaryGame.value = games.value[0]
+   
+      //Szczegóły opis + zdjęcie
+      state.details = await getBgg(primaryGame.value)
+      
     } catch (error) {
       console.error('Error adding prediction:', error);
     }
+  
   }
+async function searchBgg(gameTitle) {
+  try {
+    const response = await axios.get("http://localhost:5000/bgg/search", {
+      params: { game: gameTitle },
+    });
+    // console.log("To jest response searchBgg");
+    // console.log(response.data);
+    return response.data; // Now you can return data directly
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function getBgg(gameID) {
+  try {
+    const response = await axios.get("http://localhost:5000/bgg/get", {
+      params: { gameId: gameID },
+    });
+    return response.data; // Now you can return data directly
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 onMounted (async () => {
   try {
@@ -30,19 +70,27 @@ onMounted (async () => {
       title.value = ""
     }
     else{
-      addPrediction()
+      await addPrediction()
+      console.log('To ja twój koszmar')
+      console.log(state.details.image)
+      console.log(typeof(state.details.description))
+      //imaz.value = details.value.image
+      czekaj.value = true
     }
     
   }
   catch (error){
     console.error("Error getting prediction", error)
   }
+  finally{
+    state.isLoading = false
+  }
 });
 
 </script>
 
 <template>
-  <div v-if="czekaj" class="container mx-auto p-4">
+  <div v-if="!state.isLoading" class="container mx-auto p-4">
     <!-- Header -->
     <h3 class="text-xl font-semibold mb-4 text-center">{{ title }}</h3>
     <h1 class="text-4xl font-bold mb-2 text-center p-4">{{ prediction }}</h1>
@@ -51,16 +99,13 @@ onMounted (async () => {
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
       
       <!-- Left: Image -->
-      <div class="flex justify-center">
-        <img src="" alt="Image description" class="w-full max-w-xs rounded-lg shadow-md" />
+      <div class="justify-center p-4 m-2">
+        <img :src="state.details.image" alt="Image description" class="w-full lg:max-w-lg md:max-w-md xs:max-w-xs rounded-lg shadow-md" />
       </div>
 
       <!-- Right: Text -->
       <div class="flex flex-col justify-center text-lg space-y-4">
-        <p>
-          This is where the answer text will be shown. The description will be aligned next to the image.
-          You can add any relevant information here.
-        </p>
+      <div v-html="state.details.description"></div>
       </div>
     </div>
 

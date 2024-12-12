@@ -1,67 +1,67 @@
-Liczba_graczy;koszt1;koszt2;Przesten;Samodzielny_druk;Duzy_stol;typ_gry;mechanika_gry_s;mechanika_gry_l;mechanika_gry_p;gra
-1;darmowe;?;nie;?;?;strategia;deck building;?;?;Galdor's Grip
-1;darmowe;?;nie;?;?;strategia;euro;?;?;Awaken The Ancients
-1;darmowe;?;nie;?;?;logiczna;?;pattern matching;?;Old Town Road
-1;darmowe;?;nie;?;?;logiczna;?;roll&write;?;30 Rails
-1;darmowe;?;nie;?;?;przygodowa;?;?;dungeon crawl;GrimHoldin
-1;darmowe;?;nie;?;?;przygodowa;?;?;boss battler;Roll Crawl
-1;darmowe;?;tak;?;?;strategia;deck building;?;?;Palm Island
-1;darmowe;?;tak;?;?;strategia;euro;?;?;Dragon Dungeon
-1;darmowe;?;tak;?;?;logiczna;?;pattern matching;?;For Northwood
-1;darmowe;?;tak;?;?;logiczna;?;roll&write;?;Dungeon Pages
-1;darmowe;?;tak;?;?;przygodowa;?;?;dungeon crawl;Dungeon of D
-1;darmowe;?;tak;?;?;przygodowa;?;?;boss battler;Habits
-1;<500;?;?;tak;?;strategia;deck building;?;?;Dragon's of Etchinstone
-1;<500;?;?;tak;?;strategia;euro;?;?;Cubes of Europe
-1;<500;?;?;tak;?;logiczna;?;pattern matching;?;Gem Getter Galaxy
-1;<500;?;?;tak;?;logiczna;?;roll&write;?;Transcribe The Art. Of Alchemy
-1;<500;?;?;tak;?;przygodowa;?;?;dungeon crawl;Deck 52 Space Wrecked
-1;<500;?;?;tak;?;przygodowa;?;?;boss battler;Dragon's of Etchinstone
-1;<500;?;?;nie;?;strategia;deck building;?;?;Imperium Classics
-1;<500;?;?;nie;?;strategia;euro;?;?;Gaia Project
-1;<500;?;?;nie;?;logiczna;?;pattern matching;?;Bullet Heart
-1;<500;?;?;nie;?;logiczna;?;roll&write;?;Cartographers
-1;<500;?;?;nie;?;przygodowa;?;?;dungeon crawl;Machina Arcana
-1;<500;?;?;nie;?;przygodowa;?;?;boss battler;Aeon's End
-1;premium;?;?;?;tak;strategia;deck building;?;?;Dominion
-1;premium;?;?;?;tak;strategia;euro;?;?;Nucleum
-1;premium;?;?;?;tak;logiczna;?;pattern matching;?;Project L
-1;premium;?;?;?;tak;logiczna;?;roll&write;?;Twilight Inscription
-1;premium;?;?;?;tak;przygodowa;?;?;dungeon crawl;League of Dungeoneers
-1;premium;?;?;?;tak;przygodowa;?;?;boss battler;Aeon Tresspass Odyssey
-1;premium;?;?;?;nie;strategia;deck building;?;?;Legendary Marvel
-1;premium;?;?;?;nie;strategia;euro;?;?;Ankh
-1;premium;?;?;?;nie;logiczna;?;pattern matching;?;Bullet Star
-1;premium;?;?;?;nie;logiczna;?;roll&write;?;Railroad Ink
-1;premium;?;?;?;nie;przygodowa;?;?;dungeon crawl;Too Many Bones
-1;premium;?;?;?;nie;przygodowa;?;?;boss battler;Hoplomachus Victorum
-2;?;<500;?;?;?;strategia;deck building;?;?;One Deck Dungeon
-2;?;<500;?;?;?;strategia;euro;?;?;Cubes of Europe
-2;?;<500;?;?;?;logiczna;?;pattern matching;?;Gem Getter Galaxy
-2;?;<500;?;?;?;logiczna;?;roll&write;?;Legend of Hexdom
-2;?;<500;?;?;?;przygodowa;?;?;dungeon crawl;Roque Dungeon
-2;?;<500;?;?;?;przygodowa;?;?;boss battler;Dungeon of Doria
-2;?;premium;?;?;?;strategia;deck building;?;?;Arkham Horror The Card Game
-2;?;premium;?;?;?;strategia;euro;?;?;Castles of Burgundy
-2;?;premium;?;?;?;logiczna;?;pattern matching;?;Puzzle Dungeon
-2;?;premium;?;?;?;logiczna;?;roll&write;?;2d6 Dungeon
-2;?;premium;?;?;?;przygodowa;?;?;dungeon crawl;Elder Scrolls Betrayal of the Second Era
-2;?;premium;?;?;?;przygodowa;?;?;boss battler;Townsfolk Tussle
-3+;?;<500;?;?;?;strategia;deck building;?;?;Res Arcana
-3+;?;<500;?;?;?;strategia;euro;?;?;Lisboa
-3+;?;<500;?;?;?;logiczna;?;pattern matching;?;Vinhos
-3+;?;<500;?;?;?;logiczna;?;roll&write;?;Dungeon and Dragons
-3+;?;<500;?;?;?;przygodowa;?;?;dungeon crawl;Clank Catacombs
-3+;?;<500;?;?;?;przygodowa;?;?;boss battler;Vagrantsong
-3+;?;premium;?;?;tak;strategia;deck building;?;?;DC deck building game
-3+;?;premium;?;?;tak;strategia;euro;?;?;On Mars
-3+;?;premium;?;?;tak;logiczna;?;pattern matching;?;Brass Birmingham
-3+;?;premium;?;?;tak;logiczna;?;roll&write;?;Call of Cthulu
-3+;?;premium;?;?;tak;przygodowa;?;?;dungeon crawl;Dungeon Universalis
-3+;?;premium;?;?;tak;przygodowa;?;?;boss battler;Kingdom Death Monster
-3+;?;premium;?;?;nie;strategia;deck building;?;?;Star Realms
-3+;?;premium;?;?;nie;strategia;euro;?;?;Terra Mystica
-3+;?;premium;?;?;nie;logiczna;?;pattern matching;?;Ticket to Ride
-3+;?;premium;?;?;nie;logiczna;?;roll&write;?;Letters from Whitechall
-3+;?;premium;?;?;nie;przygodowa;?;?;dungeon crawl;Tainted Grail
-3+;?;premium;?;?;nie;przygodowa;?;?;boss battler;Marvel Champions
+Liczba_graczy,koszt1,koszt2,Przesten,Samodzielny_druk,Duzy_stol,typ_gry,mechanika_gry_s,mechanika_gry_l,mechanika_gry_p,gra
+1,darmowe,?,nie,?,?,strategia,deck building,?,?,Galdor's Grip
+1,darmowe,?,nie,?,?,strategia,euro,?,?,Awaken The Ancients
+1,darmowe,?,nie,?,?,logiczna,?,pattern matching,?,Old Town Road
+1,darmowe,?,nie,?,?,logiczna,?,roll&write,?,30 Rails
+1,darmowe,?,nie,?,?,przygodowa,?,?,dungeon crawl,GloomHoldin
+1,darmowe,?,nie,?,?,przygodowa,?,?,boss battler,Roll Crawl
+1,darmowe,?,tak,?,?,strategia,deck building,?,?,Palm Island
+1,darmowe,?,tak,?,?,strategia,euro,?,?,Dragon Dungeon
+1,darmowe,?,tak,?,?,logiczna,?,pattern matching,?,For Northwood
+1,darmowe,?,tak,?,?,logiczna,?,roll&write,?,Dungeon Pages
+1,darmowe,?,tak,?,?,przygodowa,?,?,dungeon crawl,Dungeon of D
+1,darmowe,?,tak,?,?,przygodowa,?,?,boss battler,Habits
+1,<500,?,?,tak,?,strategia,deck building,?,?,Dragon's of Etchinstone
+1,<500,?,?,tak,?,strategia,euro,?,?,Cubes of Europe
+1,<500,?,?,tak,?,logiczna,?,pattern matching,?,Gem Getter Galactic
+1,<500,?,?,tak,?,logiczna,?,roll&write,?,Transcribe The Art. Of Alchemy
+1,<500,?,?,tak,?,przygodowa,?,?,dungeon crawl,Deck 52 Space Wrecked
+1,<500,?,?,tak,?,przygodowa,?,?,boss battler,Dragon's of Etchinstone
+1,<500,?,?,nie,?,strategia,deck building,?,?,Imperium Classics
+1,<500,?,?,nie,?,strategia,euro,?,?,Gaia Project
+1,<500,?,?,nie,?,logiczna,?,pattern matching,?,Bullet Heart
+1,<500,?,?,nie,?,logiczna,?,roll&write,?,Cartographers
+1,<500,?,?,nie,?,przygodowa,?,?,dungeon crawl,Machina Arcana
+1,<500,?,?,nie,?,przygodowa,?,?,boss battler,Aeon's End
+1,premium,?,?,?,tak,strategia,deck building,?,?,Dominion
+1,premium,?,?,?,tak,strategia,euro,?,?,Nucleum
+1,premium,?,?,?,tak,logiczna,?,pattern matching,?,Project L
+1,premium,?,?,?,tak,logiczna,?,roll&write,?,Twilight Inscription
+1,premium,?,?,?,tak,przygodowa,?,?,dungeon crawl,League of Dungeoneers
+1,premium,?,?,?,tak,przygodowa,?,?,boss battler,Aeon Tresspass Odyssey
+1,premium,?,?,?,nie,strategia,deck building,?,?,Legendary Marvel
+1,premium,?,?,?,nie,strategia,euro,?,?,Ankh
+1,premium,?,?,?,nie,logiczna,?,pattern matching,?,Bullet Star
+1,premium,?,?,?,nie,logiczna,?,roll&write,?,Railroad Ink
+1,premium,?,?,?,nie,przygodowa,?,?,dungeon crawl,Too Many Bones
+1,premium,?,?,?,nie,przygodowa,?,?,boss battler,Hoplomachus Victorum
+2,?,<500,?,?,?,strategia,deck building,?,?,One Deck Dungeon
+2,?,<500,?,?,?,strategia,euro,?,?,Cubes of Europe
+2,?,<500,?,?,?,logiczna,?,pattern matching,?,Gem Getter Galactic
+2,?,<500,?,?,?,logiczna,?,roll&write,?,Legend of Hexdom
+2,?,<500,?,?,?,przygodowa,?,?,dungeon crawl,Roque Dungeon
+2,?,<500,?,?,?,przygodowa,?,?,boss battler,Dungeon of Doria
+2,?,premium,?,?,?,strategia,deck building,?,?,Arkham Horror The Card Game
+2,?,premium,?,?,?,strategia,euro,?,?,Castles of Burgundy
+2,?,premium,?,?,?,logiczna,?,pattern matching,?,Puzzle Dungeon
+2,?,premium,?,?,?,logiczna,?,roll&write,?,2d6 Dungeon
+2,?,premium,?,?,?,przygodowa,?,?,dungeon crawl,Elder Scrolls Betrayal of the Second Era
+2,?,premium,?,?,?,przygodowa,?,?,boss battler,Townsfolk Tussle
+3+,?,<500,?,?,?,strategia,deck building,?,?,Res Arcana
+3+,?,<500,?,?,?,strategia,euro,?,?,Lisboa
+3+,?,<500,?,?,?,logiczna,?,pattern matching,?,Vinhos
+3+,?,<500,?,?,?,logiczna,?,roll&write,?,Dungeon and Dragons
+3+,?,<500,?,?,?,przygodowa,?,?,dungeon crawl,Clank Catacombs
+3+,?,<500,?,?,?,przygodowa,?,?,boss battler,Vagrantsong
+3+,?,premium,?,?,tak,strategia,deck building,?,?,DC deck building game
+3+,?,premium,?,?,tak,strategia,euro,?,?,On Mars
+3+,?,premium,?,?,tak,logiczna,?,pattern matching,?,Brass Birmingham
+3+,?,premium,?,?,tak,logiczna,?,roll&write,?,Call of Cthulu
+3+,?,premium,?,?,tak,przygodowa,?,?,dungeon crawl,Dungeon Universalis
+3+,?,premium,?,?,tak,przygodowa,?,?,boss battler,Kingdom Death Monster
+3+,?,premium,?,?,nie,strategia,deck building,?,?,Star Realms
+3+,?,premium,?,?,nie,strategia,euro,?,?,Terra Mystica
+3+,?,premium,?,?,nie,logiczna,?,pattern matching,?,Ticket to Ride
+3+,?,premium,?,?,nie,logiczna,?,roll&write,?,Letters from Whitechall
+3+,?,premium,?,?,nie,przygodowa,?,?,dungeon crawl,Tainted Grail
+3+,?,premium,?,?,nie,przygodowa,?,?,boss battler,Marvel Champions
