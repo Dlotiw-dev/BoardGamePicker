@@ -4,7 +4,7 @@ import pydotplus
 from sklearn.tree import DecisionTreeClassifier
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-
+import json
 
 # import matplotlib.pyplot as plt
 # import matplotlib.image as pltimg
@@ -23,7 +23,7 @@ df['koszt1'] = df['koszt1'].map(d)
 d = {'<500': 0, 'premium': 1, "?": -1}
 df['koszt2'] = df['koszt2'].map(d)
 
-d = {'nie': 0, 'tak': 1, '?': -1}
+d = {'nie': 1, 'tak': 0, '?': -1}
 df['Przesten'] = df['Przesten'].map(d)
 
 d = {'tak': 0, 'nie': 1, '?': -1}
@@ -51,24 +51,28 @@ y = df['gra']
 
 dtree = DecisionTreeClassifier()
 dtree = dtree.fit(X, y)
-prediction = []
-print(dtree.predict([[0, 0, 2, 0, 2,2, 0, 0, 2,2]]))
 
 @app.route('/', methods=['GET'])
 def ping_pong():
     return jsonify('pong!')
 
+def getPrediction(data):
+    prediction = dtree.predict(data)
+    print(prediction)
+    return prediction
 
-@app.route('/predict', methods=['GET', 'POST'])
+@app.route('/predict', methods=['POST'])
 def all_books():
     response_object = {'status': 'success'}
+    response = ''
+    prediction = [[]]
     if request.method == 'POST':
         post_data = request.get_json()
-        prediction.append(post_data)
-        response_object['message'] = prediction
+        for i in post_data.values():
+            prediction[0].append(int(i)) 
         print(prediction)
-    else:
-        response_object['books'] = prediction
+        response = getPrediction(prediction)
+        response_object['message'] = response[0]
     return jsonify(response_object)
 
 if __name__ == "__main__":

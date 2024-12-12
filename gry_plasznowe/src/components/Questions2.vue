@@ -35,27 +35,27 @@ defineProps({
   <section class="py-4">
     <div class="container-xl lg:container m-auto">
       <h1 class="text-2xl font-bold py-2 mt-2 mb-4 text-center">{{ pytanie }}</h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg items-center justify-center">
-        <Card class="max-w-sm p-4">
-          <h2 class="text-2xl font-bold">{{nazwa1}}</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg">
+        <Card>
+          <h2 class="text-2xl font-bold text-center">{{nazwa1}}</h2>
           <p class="mt-2 mb-4">
             {{opis1}}
           </p>
           <button
             @click="handleSelection(0)"
-            class="inline-block bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-gray-700"
+            class="block bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-gray-700 mx-auto"
           >
             Wybierz
         </button>
         </Card>
-        <Card class="max-w-sm p-4">
-          <h2 class="text-2xl font-bold">{{nazwa2}}</h2>
+        <Card grid grid-cols-1 gap-2 p-2>
+          <h2 class="text-2xl font-bold text-center">{{nazwa2}}</h2>
           <p class="mt-2 mb-4">
             {{ opis2 }}
           </p>
           <button
             @click="handleSelection(1)"
-            class="inline-block bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-600"
+            class="block bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-600 mx-auto"
           >
             Wybierz
         </button>

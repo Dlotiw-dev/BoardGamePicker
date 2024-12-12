@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue';
-import axios from "axios";
 import { RouterLink, useRouter } from 'vue-router';
 import Q1Cards from '@/components/Pytania/Q1.vue';
 import Q2Cards from '@/components/Pytania/Q2.vue';
@@ -31,34 +30,8 @@ const questions = ref({
 });
 
 import { inputData } from '@/store.js'
-let prediction = ref('brak');
 
-async function addPrediction() {
-    const path = 'http://localhost:5000/predict';
-    try {
-      // Send POST request with the proper data
-      await axios.post(path,inputData.value, {headers: {
-          'Content-Type': 'application/json'  // Ensure content type is JSON
-        }
-      });
-      
-      console.log('Book added successfully');
-      this.getAnswer();  // Fetch updated books list
-    } catch (error) {
-      console.error('Error adding book:', error);
-      this.getAnswer();  // Fetch updated books list on error as well
-    }
-  }
-async function getPrediction() {
-    const path = 'http://localhost:5000/predict';
 
-    try {
-      const response = await axios.get(path);
-      this.prediction = response.data.books;
-    } catch (error) {
-      console.error('Error fetching books:', error);
-    }
-  }
 function getAnswer1(option){
   inputData.Liczba_graczy = option
   questions.value.q1 = 0
