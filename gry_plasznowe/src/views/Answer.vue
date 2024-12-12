@@ -1,6 +1,6 @@
 <script setup>
 import axios from "axios";
-//import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
+import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
 import { onMounted, ref, reactive } from 'vue';
 import { inputData } from '@/store.js'
 let prediction = ref('brak');
@@ -29,7 +29,18 @@ async function addPrediction() {
       console.log(prediction.value)
       //Id Gry
       games.value = await searchBgg(prediction.value)
-      primaryGame.value = games.value[0]
+      if (games.value[0] === '162613'){
+        primaryGame.value = games.value[1]
+      }
+      else if (games.value[0] == '373168'){
+          primaryGame.value = games.value[1]
+      }
+      else if (games.value[0] == '143740'){
+          primaryGame.value = games.value[7]
+      }
+      else{
+        primaryGame.value = games.value[0]
+      }
    
       //Szczegóły opis + zdjęcie
       state.details = await getBgg(primaryGame.value)
@@ -44,9 +55,8 @@ async function searchBgg(gameTitle) {
     const response = await axios.get("http://localhost:5000/bgg/search", {
       params: { game: gameTitle },
     });
-    // console.log("To jest response searchBgg");
-    // console.log(response.data);
-    return response.data; // Now you can return data directly
+    console.log(response.data)
+    return response.data; 
   } catch (error) {
     console.error(error);
   }
@@ -57,7 +67,7 @@ async function getBgg(gameID) {
     const response = await axios.get("http://localhost:5000/bgg/get", {
       params: { gameId: gameID },
     });
-    return response.data; // Now you can return data directly
+    return response.data; 
   } catch (error) {
     console.error(error);
   }
@@ -71,7 +81,6 @@ onMounted (async () => {
     }
     else{
       await addPrediction()
-      console.log('To ja twój koszmar')
       console.log(state.details.image)
       console.log(typeof(state.details.description))
       //imaz.value = details.value.image
@@ -111,6 +120,9 @@ onMounted (async () => {
 
     <!-- Bottom Section -->
     <h3 class="text-xl font-semibold text-center mt-6">Conclusion or Final Thought</h3>
+  </div>
+  <div v-else class="text-center text-gray-500 py-6">
+    <PulseLoader />
   </div>
   <div v-else class="container mx-auto p-4">
     <h3 class="text-xl font-semibold mb-4 text-center">{{ title }}</h3>

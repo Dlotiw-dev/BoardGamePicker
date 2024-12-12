@@ -23,7 +23,7 @@ Liczba_graczy,koszt1,koszt2,Przesten,Samodzielny_druk,Duzy_stol,typ_gry,mechanik
 1,<500,?,?,nie,?,logiczna,?,roll&write,?,Cartographers
 1,<500,?,?,nie,?,przygodowa,?,?,dungeon crawl,Machina Arcana
 1,<500,?,?,nie,?,przygodowa,?,?,boss battler,Aeon's End
-1,premium,?,?,?,tak,strategia,deck building,?,?,Dominion
+1,premium,?,?,?,tak,strategia,deck building,?,?,Dominion (Second Edition)
 1,premium,?,?,?,tak,strategia,euro,?,?,Nucleum
 1,premium,?,?,?,tak,logiczna,?,pattern matching,?,Project L
 1,premium,?,?,?,tak,logiczna,?,roll&write,?,Twilight Inscription
@@ -56,7 +56,7 @@ Liczba_graczy,koszt1,koszt2,Przesten,Samodzielny_druk,Duzy_stol,typ_gry,mechanik
 3+,?,premium,?,?,tak,strategia,deck building,?,?,DC deck building game
 3+,?,premium,?,?,tak,strategia,euro,?,?,On Mars
 3+,?,premium,?,?,tak,logiczna,?,pattern matching,?,Brass Birmingham
-3+,?,premium,?,?,tak,logiczna,?,roll&write,?,Call of Cthulu
+3+,?,premium,?,?,tak,logiczna,?,roll&write,?,Call of Cthulhu
 3+,?,premium,?,?,tak,przygodowa,?,?,dungeon crawl,Dungeon Universalis
 3+,?,premium,?,?,tak,przygodowa,?,?,boss battler,Kingdom Death Monster
 3+,?,premium,?,?,nie,strategia,deck building,?,?,Star Realms
@@ -64,4 +64,4 @@ Liczba_graczy,koszt1,koszt2,Przesten,Samodzielny_druk,Duzy_stol,typ_gry,mechanik
 3+,?,premium,?,?,nie,logiczna,?,pattern matching,?,Ticket to Ride
 3+,?,premium,?,?,nie,logiczna,?,roll&write,?,Letters from Whitechall
 3+,?,premium,?,?,nie,przygodowa,?,?,dungeon crawl,Tainted Grail
-3+,?,premium,?,?,nie,przygodowa,?,?,boss battler,Marvel Champions
+3+,?,premium,?,?,nie,przygodowa,?,?,boss battler,Marvel Champions The Card Game
