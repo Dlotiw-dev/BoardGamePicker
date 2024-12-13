@@ -23,8 +23,8 @@ const valueMappings = {
         "-1": "Not specified"
     },
     Przesten: {
-        0: "Brak przesteni",
-        1: "Miejsce do gry",
+        0: "Tak",
+        1: "Nie",
         "-1": "Not specified"
     },
     Samodzielny_druk: {
@@ -114,19 +114,16 @@ async function addPrediction() {
       console.log(prediction.value)
       //Id Gry
       games.value = await searchBgg(prediction.value)
-      if (games.value[0] === '162613'){
+      if (games.value[0] === '162613' || games.value[0] == '373168'){
         primaryGame.value = games.value[1]
-      }
-      else if (games.value[0] == '373168'){
-          primaryGame.value = games.value[1]
       }
       else if (games.value[0] == '143740'){
           primaryGame.value = games.value[7]
       }
-      else if (games.value[0] == '373169'){
+      else if (games.value[0] == '373169'|| games.value[0] == '362884'){
         primaryGame.value = games.value[1]
       }
-      else if (games.value[0] == '362884'){
+      else if (games.value[0] == '344216'){
         primaryGame.value = games.value[1]
       }
       else{
