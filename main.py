@@ -6,6 +6,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import requests
 import xml.etree.ElementTree as ET
+import python_reczny_main as pr
 # import matplotlib.pyplot as plt
 # import matplotlib.image as pltimg
 
@@ -125,6 +126,23 @@ def predict():
         print(prediction)
         response = getPrediction(prediction)
         response_object['message'] = response[0]
+    return jsonify(response_object)
+
+@app.route('/manual', methods=['POST'])
+def manuel():
+    response_object = {'status': 'success'}
+    response = ''
+    # prediction = [[]]
+    if request.method == 'POST':
+        post_data = request.get_json()
+        # for i in post_data.values():
+        #     prediction[0].append(int(i)) 
+        # print(prediction)
+        print(post_data)
+        response = pr.main(post_data)
+        print("\nto jest response\n")
+        print(response)
+        response_object['message'] = response
     return jsonify(response_object)
 
 if __name__ == "__main__":

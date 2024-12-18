@@ -44,7 +44,7 @@ defineProps({
     <div class="container-xl lg:container m-auto">
       <h1 class="text-2xl font-bold py-2 mt-2 mb-4 text-center">{{ pytanie }}</h1>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 rounded-lg">
-        <Card class="max-w-sm p-4">
+        <Card>
           <h2 class="text-2xl font-bold">{{nazwa1}}</h2>
           <p class="mt-2 mb-4">
             {{opis1}}

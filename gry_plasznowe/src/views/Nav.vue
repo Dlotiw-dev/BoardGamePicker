@@ -77,15 +77,15 @@ let navOpen = ref(true)
               Wynik
             </RouterLink>
             <RouterLink
-              to="/search"
+              to="/manual"
               :class="[
-                isActiveLink('/search')
+                isActiveLink('/manual')
                   ? 'bg-green-900'
                   : 'hover:bg-gray-900 hover:text-white',
                 'block md:inline-block text-white px-3 py-2 rounded-md',
               ]"
             >
-              Szukaj
+              Ręczny
             </RouterLink>
           </div>
         </div>
