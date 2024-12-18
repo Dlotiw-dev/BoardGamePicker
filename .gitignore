@@ -6,3 +6,4 @@ venv
 src
 .~lock*
 .vscode/launch.json
+__pycache__/python_reczny_main.cpython-312.pyc
